@@ -39,13 +39,6 @@ exports.AppModule = AppModule = __decorate([
                 database: process.env.DB_NAME,
                 autoLoadEntities: true,
                 synchronize: false,
-                ssl: process.env.POSTGRES_SSL === 'true',
-                extra: {
-                    ssl: process.env.POSTGRES_SSL === 'true'
-                        ? {
-                            rejectUnauthorized: false
-                        } : null,
-                }
             }),
             project_module_1.ProjectModule,
         ],
