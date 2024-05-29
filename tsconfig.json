@@ -1,24 +1,22 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "rootDir": "./src",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2021",
+    "target": "es6",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
-    "strict": true,
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false
-  }, 
-  "include": ["src/**/*"]
+    "strict": true,
+    "paths": {
+      "*": ["node_modules/*"],
+      "@app/*": ["src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
 }
