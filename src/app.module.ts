@@ -27,14 +27,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       database: process.env.DB_NAME,
       autoLoadEntities: true,
       synchronize: false,
-      ssl: process.env.POSTGRES_SSL === 'true',
-      extra: {
-        ssl:
-        process.env.POSTGRES_SSL === 'true' 
-        ? { 
-          rejectUnauthorized: false 
-        } : null,
-      }
     }),
     ProjectModule,
  
